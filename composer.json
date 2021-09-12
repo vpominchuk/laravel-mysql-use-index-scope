@@ -1,0 +1,34 @@
+{
+  "name": "vpominchuk/laravel-mysql-use-index-scope",
+  "description": "A super simple package allowing for use MySQL `USE INDEX` and `FORCE INDEX` statements",
+  "keywords": [
+    "laravel",
+    "laravel mysql",
+    "laravel mysql use index",
+    "laravel mysql force index",
+  ],
+  "homepage": "https://github.com/vpominchuk/laravel-mysql-use-index-scope",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Vasyl Pominchuk",
+      "email": "vpominchuk@gmail.com",
+      "homepage": "https://pominchuk.com",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": "^7.4 | ^8.0",
+    "illuminate/support": "^6.0|^7.0|^8.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "VPominchuk\\": "src"
+    }
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
