@@ -5,7 +5,7 @@
     "laravel",
     "laravel mysql",
     "laravel mysql use index",
-    "laravel mysql force index",
+    "laravel mysql force index"
   ],
   "homepage": "https://github.com/vpominchuk/laravel-mysql-use-index-scope",
   "license": "MIT",
@@ -13,7 +13,6 @@
     {
       "name": "Vasyl Pominchuk",
       "email": "vpominchuk@gmail.com",
-      "homepage": "https://pominchuk.com",
       "role": "Developer"
     }
   ],
@@ -29,6 +28,4 @@
   "config": {
     "sort-packages": true
   },
-  "minimum-stability": "dev",
-  "prefer-stable": true
 }
