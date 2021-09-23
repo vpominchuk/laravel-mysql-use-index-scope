@@ -43,6 +43,9 @@ Tells MySQL to use an index if it possible.
 #### `forceIndex($indexName)`
 Force MySQL to use an index if it possible.
 
+#### `ignoreIndex($indexName)`
+Ask MySQL to ignore an index if it possible.
+
 ## Security
 
 If you discover any security related issues, please use the issue tracker.

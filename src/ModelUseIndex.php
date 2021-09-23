@@ -9,19 +9,74 @@ use Illuminate\Support\Facades\DB;
 /**
  * @method Builder useIndex(string $index)
  * @method Builder forceIndex(string $index)
+ * @method Builder ignoreIndex(string $index)
  *
  */
 trait ModelUseIndex
 {
-    public function scopeUseIndex($query, string $index): Builder
+    private $from = [];
+
+    /**
+     * @param string|array $index
+     * @return string
+     */
+    private function parseIndexName($index): string
     {
-        $table = $this->getTable();
-        return $query->from(DB::raw("`$table` USE INDEX(`$index`)"));
+        if (is_array($index)) {
+            return "`" . implode("`, `", $index) . "`";
+        }else{
+            return "`" . $index . "`";
+        }
     }
 
-    public function scopeForceIndex($query, string $index): Builder
+    /**
+     * @param $query
+     * @param string|array $index
+     * @return Builder
+     */
+    public function scopeUseIndex($query, $index): Builder
     {
         $table = $this->getTable();
-        return $query->from(DB::raw("`$table` FORCE INDEX(`$index`)"));
+        $index = $this->parseIndexName($index);
+
+        $this->from[] = "USE INDEX($index)";
+
+        $raw = "`$table` " . implode(" ", $this->from);
+
+        return $query->from(DB::raw($raw));
+    }
+
+    /**
+     * @param $query
+     * @param string|array $index
+     * @return Builder
+     */
+    public function scopeForceIndex($query, $index): Builder
+    {
+        $table = $this->getTable();
+        $index = $this->parseIndexName($index);
+
+        $this->from[] = "FORCE INDEX($index)";
+
+        $raw = "`$table` " . implode(" ", $this->from);
+
+        return $query->from(DB::raw($raw));
+    }
+
+    /**
+     * @param $query
+     * @param string|array $index
+     * @return Builder
+     */
+    public function scopeIgnoreIndex($query, $index): Builder
+    {
+        $table = $this->getTable();
+        $index = $this->parseIndexName($index);
+
+        $this->from[] = "IGNORE INDEX($index)";
+
+        $raw = "`$table` " . implode(" ", $this->from);
+
+        return $query->from(DB::raw($raw));
     }
 }
