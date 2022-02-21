@@ -4,7 +4,7 @@ A super simple package allowing for use MySQL `USE INDEX` and `FORCE INDEX` stat
 
 ## Requirements
 - PHP `^7.4 | ^8.0`
-- Laravel 6, 7 and 8
+- Laravel 6, 7, 8 and 9
 
 ## Installation
 
