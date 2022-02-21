@@ -7,9 +7,9 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Facades\DB;
 
 /**
- * @method Builder useIndex(string $index)
- * @method Builder forceIndex(string $index)
- * @method Builder ignoreIndex(string $index)
+ * @method Builder useIndex(string|string[] $index)
+ * @method Builder forceIndex(string|string[] $index)
+ * @method Builder ignoreIndex(string|string[] $index)
  *
  */
 trait ModelUseIndex
