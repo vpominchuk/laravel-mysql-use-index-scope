@@ -22,7 +22,7 @@
   },
   "autoload": {
     "psr-4": {
-      "VPominchuk\\": "src"
+      "VPominchuk\\ModelUseIndex\\": "src/"
     }
   },
   "config": {
