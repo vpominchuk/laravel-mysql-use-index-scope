@@ -1,4 +1,9 @@
 ![](https://banners.beyondco.de/Laravel%20MySQL%20USE%20INDEX%20Model%20Scope.png?theme=light&packageManager=composer+require&packageName=vpominchuk%2Flaravel-mysql-use-index-scope&pattern=texture&style=style_1&description=Allowing+for+use+MySQL+USE+INDEX+and+FORCE+INDEX+statements&md=1&showWatermark=0&fontSize=100px&images=https%3A%2F%2Flaravel.com%2Fimg%2Flogomark.min.svg)
+
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/vpominchuk/laravel-mysql-use-index-scope.svg?style=flat-square)](https://packagist.org/packages/vpominchuk/laravel-mysql-use-index-scope)
+[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE)
+[![Total Downloads](https://img.shields.io/packagist/dt/vpominchuk/laravel-mysql-use-index-scope.svg?style=flat-square)](https://packagist.org/packages/vpominchuk/laravel-mysql-use-index-scope)
+
 # Laravel MySQL Use Index Scope
 A super simple package allowing for use MySQL `USE INDEX` and `FORCE INDEX` statements.
 
