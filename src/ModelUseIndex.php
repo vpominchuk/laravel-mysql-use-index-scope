@@ -56,7 +56,14 @@ trait ModelUseIndex
         $table = $this->getTable();
         $index = $this->parseIndexName($index);
 
-        $this->from[] = "FORCE INDEX($index)";
+        $driver = $this->getConnection()->getDriverName();
+        
+        if($driver=='spanner'){
+            $this->from[] = "@{FORCE_INDEX=$index}";
+        }else {
+            $this->from[] = "FORCE INDEX($index)";
+        }
+          
 
         $raw = "`$table` " . implode(" ", $this->from);
 
