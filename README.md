@@ -9,7 +9,7 @@ A super simple package allowing for use MySQL `USE INDEX` and `FORCE INDEX` stat
 
 ## Requirements
 - PHP `^7.4 | ^8.0`
-- Laravel 6, 7, 8, 9, 10, and 11
+- Laravel 6, 7, 8, 9, 10, 11, and 12
 
 ## Installation
 
